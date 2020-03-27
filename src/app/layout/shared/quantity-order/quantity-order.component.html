@@ -1,0 +1,43 @@
+<div class="modal" id="modal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content scrollOverflow">
+    
+      <div class="modal-header">
+        <h5 class="modal-title headingWordWrap">Enter Quantity</h5>
+        <button type="button" class="close" (click)="closeModal(0)">
+          <span aria-hidden="true" class="fa fa-remove"></span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form #internalForm="ngForm">
+          <div class="mainContainerWrap">
+            <div class="mainDiv">
+              <div class="dataWrap">
+                <b style="color: #dc3545;
+                  font-weight: 100;
+                  font-size: 15px;">Your order will be added in cart.</b>
+              </div>
+              <div class="dataWrap">
+                <div class="rowWrap">
+                  <div class="getDataWrap">
+                    <label>Enter Order Quantity</label>
+                   <input type="text" placeholder="Enter Order Quantity" [(ngModel)]="addItems.quantity"
+                    #order_quantity = "ngModel" class="form-control" name="order_quantity">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary buttonWrap" (click)="orderEnter(1)"
+          [disabled]="!internalForm.form.valid">Submit</button>
+         
+        <button type="button" class="btn btn-danger buttonWrap" (click)="closeModal(0)">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

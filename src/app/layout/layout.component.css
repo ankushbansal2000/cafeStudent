@@ -1,0 +1,8 @@
+.mainContainer{
+    float: left;
+   width: 100%;
+position: relative;
+top: 60px;
+z-index: .1;
+    
+}

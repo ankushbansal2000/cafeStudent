@@ -1,0 +1,100 @@
+.modal-dialog {
+    max-width: 50%;
+    max-height: 500px;
+    margin: 0px auto;
+    animation-name: example;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+    position: relative;
+  }
+  @keyframes example {
+    from {top: 0px; background-color: yellow;}
+    to {top: 100px;}
+  }
+  .summaryPosition{
+    color:#106CD1 !important; cursor: pointer;
+  }
+  .modal {
+    
+    background: #00000038;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 700;
+     display: none;
+    overflow: hidden;
+    outline: 0;
+  }
+  .headingWordWrap{
+    float: left;
+    color: #007bff;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .tableWrap {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    overflow-y: scroll;
+    max-height: 200px;
+}
+
+
+td, th {
+    padding: 4px !important;
+    font-size: 12px;
+  }
+  
+  table,
+  tr td {
+    border: 1px solid #E9ECEF;
+  }
+  
+  tbody {
+    display: block !important;
+    overflow-y: overlay !important;
+    max-height: 440px !important;
+  }
+  
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    position: relative !important;
+  }
+  
+  thead {
+    width: 100%;
+  }
+  
+  table {
+    width: auto !important;
+  }
+   table tr img {
+       max-width: 100px;
+       max-height: 100px;
+   }
+   .totalPriceWrap{
+float: left;
+width: 65%;
+   }
+   .labelForTotalPrice{
+float: left;
+width: 20%;
+text-align: right;
+   }
+   .TotalAmountWrap {
+    float: left;
+    width: 65%;
+   }
+   .btn {
+     font-size: 11px;
+   }
+.inputForUpdate {
+  float: left;
+  width: 100%;
+}

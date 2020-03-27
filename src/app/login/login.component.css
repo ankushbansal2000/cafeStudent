@@ -1,0 +1,39 @@
+
+.loginpage
+{
+float: left; 
+width: 100%;
+height: 100vh;
+background-color: white;
+}
+
+
+.loginimage
+{
+width: 200px;
+margin-left: 43%;
+margin-top: 6%;
+}
+
+.loginimage img
+{
+border: 4px solid rgb(0, 0, 0);
+border-radius: 60%;
+}
+
+.loginform
+{
+width: 30%;
+margin-left: 35%;
+margin-right: 35%; 
+margin-top: 5%;
+border: 2px solid black;
+padding: 20px;
+border-top-right-radius: 10%;
+}
+
+div.form-group:nth-child(3)
+{
+margin-left: 40%;
+margin-top:  15%;
+}

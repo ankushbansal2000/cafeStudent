@@ -1,0 +1,97 @@
+<div class="modal" id="modal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content scrollOverflow" *ngIf="!onUpdateBool">
+
+      <div class="modal-header">
+        <h5 class="modal-title headingWordWrap">Cart Items</h5>
+        <button type="button" class="close" (click)="closeModal(0)">
+          <span aria-hidden="true" class="fa fa-remove"></span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form #internalForm="ngForm">
+          <div class="mainContainerWrap">
+            <div class="mainDiv">
+              <div class="dataWrap">
+                <b style="color: #dc3545;
+                        font-weight: 100;
+                        font-size: 15px;">Your order in cart are </b>
+              </div>
+              <div class="dataWrap">
+                <div class="rowWrap">
+                  <div class="getDataWrap">
+                    <div class="tableWrap">
+                      <div class="table-responsive">
+                        <table class="table table-hover table-bordered">
+                          <tr>
+                            <th style="min-width: 125px">Dish Name</th>
+                            <th style="min-width: 90px">Quantity</th>
+                            <th style="min-width: 125px">Item Price per Unit</th>
+                            <th style="min-width: 90px">Total Price</th>
+                            <th style="min-width: 90px">Update</th>
+                            <th style="min-width: 90px">Delete</th>
+                          </tr>
+                          <tr *ngFor="let item of itemList">
+                            <td>{{item.item_name}}</td>
+                            <td>{{item.quantity}}</td>
+                            <td>{{item.item_price}}</td>
+                            <td>{{item.quantity * item.item_price}}</td>
+                            <td>
+                              <button class="btn btn-primary" (click)="onUpdateApi(item.id)">Update</button>
+                            </td>
+                            <td>
+                              <button class="btn btn-primary" (click)="onDeleteApi(item.id)">Delete</button>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <div class="totalPriceWrap">
+          <div class="labelForTotalPrice">
+            Total :-
+          </div>
+          <div class="TotalAmountWrap">
+            {{total}}
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary buttonWrap" (click)="orderEnter()"
+          [disabled]="!internalForm.form.valid">place Order</button>
+        <button type="button" class="btn btn-danger buttonWrap" (click)="closeModal(0)">Close</button>
+      </div>
+    </div>
+
+    <div class="modal-content scrollOverflow" *ngIf="onUpdateBool">
+      <div class="modal-header">
+        <h5 class="modal-title headingWordWrap">Edit Quantity for Order</h5>
+        <button type="button" class="close" (click)="closeModal(0)">
+          <span aria-hidden="true" class="fa fa-remove"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="inputForUpdate">
+          Enter Quantity
+          <input type="text" placeholder="Enter Order Quantity" [(ngModel)]="updateQuantityOrder.quantity"
+          #order_quantity = "ngModel" class="form-control" name="order_quantity">
+      
+        </div>
+      </div>
+
+      <div class="modal-footer">
+          <button class="btn btn-primary" (click)="onUpdateQuantity()">Update</button>
+        <button type="button" class="btn btn-danger buttonWrap" (click)="onCloseQuantity()">Close</button>
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,80 @@
+.mainWrap {
+    float: left;
+    width: 100%;
+}
+.mainConatinerWrap {
+    float: left;
+    width: 100%;
+    padding: 10px;
+}
+.headerWrap {
+    float: left;
+    width: 100%;
+    padding: 8px 25px;
+    position: fixed;
+}
+.headerWrap button {
+    float: right;
+}
+.cardWrap {
+    float: left;
+    width: 23%;
+    box-shadow: 1px 3px 5px 2px #80808040;
+    margin: 10px;
+    cursor: pointer;
+    min-height: 294px;
+}
+.imageWrap{
+    float: left;
+    width: 100%;
+    height: 170px;
+}
+.imageWrap img {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.itemNameWrap{
+    float: left;
+    width: 100%;
+    font-family: sans-serif;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #000000;
+}
+.itemDescription {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    min-height: 55px;
+    padding-left: 10px;
+    color: gray; 
+}
+.priceWrap {
+    float: left;
+    width: 60%;
+}
+.bottomWrapOrder {
+    float: left;
+    width: 100%; 
+    padding: 10px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .cardWrap{
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 20px;
+
+    }
+    .headerWrap {
+        z-index: 1;
+        bottom: 0px;
+    }
+    .headerWrap button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,35 @@
+<div class="mainWrap">
+        <div class="headerWrap">
+                <button class="btn btn-primary" (click)="forOrderPlace()">Place Order</button>
+            </div>
+    <div class="container">
+      
+        <div class="mainConatinerWrap">
+            <div class="cardWrap" *ngFor="let item of itemList" (click)="showPopup(item)">
+                <div class="card" >
+                    <div class="imageWrap">
+                    <img src="{{item.image}}">
+                    </div>
+                    <div class="itemNameWrap">
+                        {{item.name}}
+                    </div>
+                    <div class="itemDescription">
+                            {{item.desc}}
+                    </div>
+                    <div class="bottomWrapOrder">
+                    <div class="priceWrap">
+                        Rs {{item.price}}/-
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<app-quantity-order *ngIf="showPopupforQuantity" [input]="input"
+(showPopupforQuantity)=onUpdate($event)></app-quantity-order>
+
+<app-cart *ngIf="showPopupforPlaceOrder" [orderInCart]="cart"
+(showPopupforPlaceOrder)=onUpdateOfOrder($event)></app-cart>

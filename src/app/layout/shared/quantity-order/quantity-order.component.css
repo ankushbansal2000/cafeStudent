@@ -1,0 +1,35 @@
+.modal-dialog {
+    max-width: 25%;
+    margin: 0px auto;
+
+    animation-name: example;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+    position: relative;
+  }
+  @keyframes example {
+    from {top: 0px; background-color: yellow;}
+    to {top: 100px;}
+  }
+  .summaryPosition{
+    color:#106CD1 !important; cursor: pointer;
+  }
+  .modal {
+    
+    background: #00000038;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 700;
+     display: none;
+    overflow: hidden;
+    outline: 0;
+  }
+  .headingWordWrap{
+    float: left;
+    color: #007bff;
+    font-size: 17px;
+    font-weight: bold;
+  }
