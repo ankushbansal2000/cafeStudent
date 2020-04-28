@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GuardGuard implements CanActivate {
+
   constructor(private router: Router) {}
+  
   canActivate() {
     if (sessionStorage.getItem('token')) {
         return true; 

@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   onLogin(loginData: Student) {
     this.apiService.logInUser(loginData.user_email, loginData.user_pass).subscribe(data => {
       data.forEach(function (value) {

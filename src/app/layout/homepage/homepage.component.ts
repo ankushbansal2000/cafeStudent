@@ -20,17 +20,22 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
     this.getItem();
   }
+
+
   showPopup(item) {
     this.input = item;
     this.showPopupforQuantity = true;
   }
+  
   forOrderPlace(){
     this.showPopupforPlaceOrder = true;
   }
 
   getItem() {
     this.apiService.getItems().subscribe(data => {
+      console.log(data);
       this.itemList = data;
+      console.log(this.itemList);
     },
       error => {
         alert(error.error.text);

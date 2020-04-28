@@ -35,8 +35,9 @@ export class QuantityOrderComponent implements OnInit {
     modal.style.display = 'none';
     const emitter = new AppEventEmitter();
     emitter.eventData = no;
-    this.showPopupforQuantity.emit(emitter);
+    this.showPopupforQuantity.emit(emitter); 
   }
+
   orderEnter(data: number) {
     var modal = document.getElementById('modal');
     modal.style.display = 'none';
@@ -45,6 +46,7 @@ export class QuantityOrderComponent implements OnInit {
     this.addItems.item_price = this.input.price;
     this.postApiCall(this.addItems,data);
   }
+  
   postApiCall(dataLocal: OrderData, no) {
     this.apiService.postCartData(dataLocal).subscribe(data => {
       const emitter = new AppEventEmitter();
